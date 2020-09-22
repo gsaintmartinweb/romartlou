@@ -18,6 +18,16 @@ def home(request):
     return render(request, 'blog/home.html', context)
 
 
+def homepage(request):
+    return render(request, 'blog/homepage.html')   
+
+
+def ourservices(request):
+    return render(request, 'blog/our-services.html')   
+
+def realisations(request):
+    return render(request, 'blog/realisations.html')   
+
 class PostListView(ListView):
     model = Post
     template_name = 'blog/home.html'  # <app>/<model>_<viewtype>.html

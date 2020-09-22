@@ -2,7 +2,7 @@
 
 - Launching 
 
-Une fois sur le venv correspondant, run:
+Une fois sur le venv correspondant, dans le répertoire contenant l'application, run:
 
 python manage.py runserver
 
