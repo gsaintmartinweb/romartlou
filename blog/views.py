@@ -19,14 +19,20 @@ def home(request):
 
 
 def homepage(request):
-    return render(request, 'blog/homepage.html')   
+    return render(request, 'blog/homepage.html')
+
+
+def accueiljer(request):
+    return render(request, 'blog/accueiljer.html')
 
 
 def ourservices(request):
-    return render(request, 'blog/our-services.html')   
+    return render(request, 'blog/our-services.html')
+
 
 def realisations(request):
-    return render(request, 'blog/realisations.html')   
+    return render(request, 'blog/realisations.html')
+
 
 class PostListView(ListView):
     model = Post
