@@ -12,7 +12,6 @@ from . import views
 urlpatterns = [
    # path('', PostListView.as_view(), name='blog-home'),
     path('', views.homepage, name='accueil'),
-    path('accueiljer', views.accueiljer, name='accueiljer'),
     path('nos-services', views.ourservices, name='nos-services'),
     path('realisations', views.realisations, name='realisations'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),

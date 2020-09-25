@@ -22,10 +22,6 @@ def homepage(request):
     return render(request, 'blog/homepage.html')
 
 
-def accueiljer(request):
-    return render(request, 'blog/accueiljer.html')
-
-
 def ourservices(request):
     return render(request, 'blog/our-services.html')
 
