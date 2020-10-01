@@ -39,12 +39,11 @@ def contact(request):
     else:
         form = contactformemail(request.POST)
         if form.is_valid():
-            frommail = form.cleaned_data['fromemail']
-            subject = form.cleaned_data['subject']
-            message = form.cleaned_data['message']
-            send_mail(subject, message, frommail, [
-                      os.environ.get('EMAIL_USER'), frommail])
-            print(os.environ.get('EMAIL_USER'))
+            Email = form.cleaned_data['Email']
+            Objet = form.cleaned_data['Objet']
+            Message = form.cleaned_data['Message']
+            send_mail(Objet, Message, Email, [
+                      os.environ.get('EMAIL_USER'), Email])
     return render(request, 'blog/contact.html', {'form': form})
 
 

@@ -1,12 +1,18 @@
 {% extends "blog/base.html" %}
 {% block content %}
 
-<form method="POST">
-    {% csrf_token %}
-    <table border="1">
-        {{form}}
-    </table>
-    <input type="submit" value="Envoyer">
-</form>
+<div class="row text-center form-contact justify-content-md-center">
+    <div class="col-md-auto site-font">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="card card-form .col-sm-12 .col-md-12 .col-lg-4 .col-xl-4 text-center" >
+                {{form}}
+            </div>
+             
+            <input class="btn btn-outline-primary" type="submit" value="Envoyer">
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+</div>
 
 {% endblock content %}
