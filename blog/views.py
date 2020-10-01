@@ -9,6 +9,9 @@ from django.views.generic import (
     DeleteView
 )
 from .models import Post
+from .forms import contactformemail
+from django.core.mail import send_mail
+import os
 
 
 def home(request):
@@ -32,6 +35,21 @@ def ourservices(request):
 
 def realisations(request):
     return render(request, 'blog/realisations.html')
+
+
+def contact(request):
+    if request.method == "GET":
+        form = contactformemail()
+    else:
+        form = contactformemail(request.POST)
+        if form.is_valid():
+            frommail = form.cleaned_data['fromemail']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            send_mail(subject, message, frommail, [
+                      os.environ.get('EMAIL_USER'), frommail])
+            print(os.environ.get('EMAIL_USER'))
+    return render(request, 'blog/contact.html', {'form': form})
 
 
 class PostListView(ListView):
