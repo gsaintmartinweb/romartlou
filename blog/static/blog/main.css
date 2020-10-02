@@ -11,6 +11,7 @@ h4,
 h5,
 h6 {
   color: #34add1;
+  font-family: "Amatic SC", cursive;
 }
 
 ul {
@@ -95,9 +96,28 @@ margin-top: 2rem;
   padding-top: 1rem;
 }
 
+.realisations{
+  background-color: #92b7c93b;
+  border-radius: 2%;
+  box-shadow: 3px #648493;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  font-family: "Amatic SC", cursive;
+  font-size: x-large;
+}
+
+.realisations h1{
+  justify-content: center;
+}
+
+.realisations img{
+  border: 3px solid #648493;
+}
+
+
 
 .red {
-  background-color: #34add1;
+  background-color: #34add1; 
   color: white;
   font-weight: bolder;
   border-radius: 50px;

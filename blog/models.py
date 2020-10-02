@@ -15,3 +15,9 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk': self.pk})
+
+
+class imggal(models.Model):
+    imgtitle = models.CharField(max_length=100)
+    imgdesc = models.CharField(max_length=500)
+    image = models.ImageField(upload_to='images/')

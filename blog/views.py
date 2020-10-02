@@ -8,7 +8,7 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
-from .models import Post
+from .models import Post, imggal
 from .forms import contactformemail
 from django.core.mail import send_mail
 import os
@@ -45,6 +45,12 @@ def contact(request):
             send_mail(Objet, Message, Email, [
                       os.environ.get('EMAIL_USER'), Email])
     return render(request, 'blog/contact.html', {'form': form})
+
+
+def imagedisplay(request):
+    resultsdisplay = imggal.objects.all()
+    return render(request, 'blog/realisations.html',
+                  {'imggal': resultsdisplay})
 
 
 class PostListView(ListView):
