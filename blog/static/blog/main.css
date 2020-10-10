@@ -116,14 +116,13 @@ background-color: #648493;
 .homepage-header {
   background-image: url("../../../media/ice-2065622_1920.jpg");
   background-size: cover;
-  font-size: larger;
-  font-weight: bolder;
-  width: 100%;
+  font-weight: bold;
+  width: auto;
   height: auto;
-  text-align: center;
+  text-align: justify;
   vertical-align: middle;
-  line-height: 20rem;
-  font-size: xx-large;
+  line-height: 5rem;
+  font-size: 3rem;
   font-family: "Satisfy", cursive;
 }
 
